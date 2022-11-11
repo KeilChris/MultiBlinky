@@ -1,0 +1,101 @@
+# CMSIS Build Audit File generated on 2022-11-11T13:47:51
+
+# Project Description File: C:/02_Git/KeilChris/MultiBlinky/Blinky.Debug+FRDM-K32L3A6.cprj
+
+# Toolchain Configuration File: C:/Keil_v5/ARM/ctools/etc/AC6.6.18.0.cmake
+
+# Package: ARM.CMSIS.5.9.0
+  Location: C:\Users\chrsei01\AppData\Local\Arm\Packs/ARM/CMSIS/5.9.0/
+
+  * Component: ARM::CMSIS Driver.SPI.Custom:1.0.0
+
+  * Component: ARM::CMSIS Driver.VIO.Custom:1.0.0
+
+  * Component: ARM::CMSIS.CORE:5.6.0
+
+  * Component: ARM::CMSIS.RTOS2.Keil RTX5:Source:5.5.4
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/RTOS/RTX/RTE/CMSIS/RTX_Config.c:5.1.1
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/RTOS/RTX/RTE/CMSIS/RTX_Config.h:5.5.2
+
+  * API: CMSIS Driver.SPI(API):2.3.0
+
+  * API: CMSIS Driver.USART(API):2.4.0
+
+  * API: CMSIS Driver.VIO(API):0.1.0
+
+  * API: CMSIS.RTOS2(API):2.1.3
+
+# Package: NXP.FRDM-K32L3A6_BSP.13.0.0
+  Location: C:\Users\chrsei01\AppData\Local\Arm\Packs/NXP/FRDM-K32L3A6_BSP/13.0.0/
+
+  * Component: NXP::Board Support.SDK Project Template.project_template:frdmk32l3a6:1.0.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Board_Support/K32L3A60VPJ1A_cm4/board.c:1.0.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Board_Support/K32L3A60VPJ1A_cm4/board.h:1.0.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Board_Support/K32L3A60VPJ1A_cm4/clock_config.c:1.0.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Board_Support/K32L3A60VPJ1A_cm4/clock_config.h:1.0.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Board_Support/K32L3A60VPJ1A_cm4/peripherals.c:1.0.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Board_Support/K32L3A60VPJ1A_cm4/peripherals.h:1.0.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Board_Support/K32L3A60VPJ1A_cm4/pin_mux.c:1.0.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Board_Support/K32L3A60VPJ1A_cm4/pin_mux.h:1.0.0
+
+# Package: NXP.K32L3A60_DFP.13.0.0
+  Location: C:\Users\chrsei01\AppData\Local\Arm\Packs/NXP/K32L3A60_DFP/13.0.0/
+
+  * Component: NXP::CMSIS Driver.USART.lpuart_cmsis:2.1.0
+
+  * Component: NXP::Device.CMSIS.K32L3A60_header:1.0.0
+
+  * Component: NXP::Device.CMSIS.K32L3A60_system:1.0.0
+
+  * Component: NXP::Device.SDK Drivers.clock:2.2.1
+
+  * Component: NXP::Device.SDK Drivers.common:2.2.9
+
+  * Component: NXP::Device.SDK Drivers.dmamux:2.0.5
+
+  * Component: NXP::Device.SDK Drivers.edma:2.4.1
+
+  * Component: NXP::Device.SDK Drivers.fxos8700cq:1.0.0
+
+  * Component: NXP::Device.SDK Drivers.gpio:2.5.1
+
+  * Component: NXP::Device.SDK Drivers.i2c:2.2.0
+
+  * Component: NXP::Device.SDK Drivers.lists:1.0.0
+
+  * Component: NXP::Device.SDK Drivers.lpspi:2.1.0
+
+  * Component: NXP::Device.SDK Drivers.lpuart:2.4.1
+
+  * Component: NXP::Device.SDK Drivers.lpuart_adapter:1.0.0
+
+  * Component: NXP::Device.SDK Drivers.msmc:2.1.2
+
+  * Component: NXP::Device.SDK Drivers.port:2.1.1
+
+  * Component: NXP::Device.SDK Project Template.RTE_Device:1.0.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Device/K32L3A60VPJ1A_cm4/RTE_Device.h:1.0.0
+
+  * Component: NXP::Device.SDK Utilities.assert:1.0.0
+
+  * Component: NXP::Device.SDK Utilities.debug_console:1.0.0
+
+  * Component: NXP::Device.SDK Utilities.serial_manager:1.0.0
+
+  * Component: NXP::Device.SDK Utilities.serial_manager_uart:1.0.0
+
+  * Component: NXP::Device.Startup:1.1.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Device/K32L3A60VPJ1A_cm4/K32L3A60xxx_cm4_flash.scf:1.1.0
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/FRDM-K32L3A6/RTE/Device/K32L3A60VPJ1A_cm4/K32L3A60xxx_cm4_ram.scf:1.1.0
+
+# Package: Keil.ARM_Compiler.1.7.2
+  Location: C:\Users\chrsei01\AppData\Local\Arm\Packs/Keil/ARM_Compiler/1.7.2/
+
+  * Component: Keil.ARM Compiler::Compiler.Event Recorder:DAP:1.5.1
+    - ConfigFile: C:/02_Git/KeilChris/MultiBlinky/Board/IMXRT1050-EVKB/RTE/Compiler/EventRecorderConf.h:1.1.0
+
+  * Component: Keil.ARM Compiler::Compiler.I/O.STDERR:User:1.2.0
+
+  * Component: Keil.ARM Compiler::Compiler.I/O.STDIN:User:1.2.0
+
+  * Component: Keil.ARM Compiler::Compiler.I/O.STDOUT:User:1.2.0

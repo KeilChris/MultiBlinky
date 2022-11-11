@@ -78,4 +78,4 @@ layer:
         - file: ./stm32l475.sct
     - group: STM32CubeMX
       files:
-        - file: ../../RTE/Device/STM32L475VGTx/STCubeGenerated/STCubeGenerated.ioc
+        - file: ./RTE/Device/STM32L475VGTx/STCubeGenerated/STCubeGenerated.ioc
