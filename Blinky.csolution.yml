@@ -54,6 +54,14 @@ solution:
       for-type:
         - +NUCLEO-G474RE
 
+    # packs for NUCLEO-G0B1RE
+    - pack: Keil::STM32G0xx_DFP
+      for-type:
+        - +NUCLEO-G0B1RE
+    - pack: Keil::NUCLEO-G0B1RE_BSP
+      for-type:
+        - +NUCLEO-G0B1RE
+
   target-types:
     - type: AVH_MPS2_Cortex-M7
       device: ARM::CMSDK_CM7_DP_VHT
@@ -77,6 +85,10 @@ solution:
     - type: NUCLEO-G474RE
       board: STMicroelectronics::NUCLEO-G474RE:Rev.C
       device: STMicroelectronics::STM32G474RETx
+
+    - type: NUCLEO-G0B1RE
+      board: STMicroelectronics::NUCLEO-G0B1RE:Rev.C
+      device: STMicroelectronics::STM32G0B1RETx
 
   build-types:
     - type: Debug

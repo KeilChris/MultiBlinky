@@ -28,4 +28,7 @@ project:
     - layer: ./Board/NUCLEO-G474/Board.clayer.yml
       for-type: 
         - +NUCLEO-G474RE
+    - layer: ./Board/NUCLEO-G0B1RE/Board.clayer.yml
+      for-type: 
+        - +NUCLEO-G0B1RE
     - layer: ./RTOS/RTX/RTOS.clayer.yml
