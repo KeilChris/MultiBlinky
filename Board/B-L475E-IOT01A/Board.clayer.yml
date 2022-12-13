@@ -32,9 +32,7 @@ layer:
 
   components:
     - component: Keil::Device:Startup
-
     - component: Keil::Device:STM32Cube Framework:STM32CubeMX
-
     - component: Keil::Device:STM32Cube HAL:Common
     - component: Keil::Device:STM32Cube HAL:Cortex
     - component: Keil::Device:STM32Cube HAL:DMA
@@ -62,7 +60,6 @@ layer:
     - component: Keil::CMSIS Driver:SPI
     - component: Keil::CMSIS Driver:USART
     - component: Keil::CMSIS Driver:VIO:Board&B-L475E-IOT01A
-#    - component: Keil::CMSIS Driver:WiFi:ISM43362
 
     - component: Keil::Compiler&ARM Compiler:Event Recorder&DAP
     - component: Keil::Compiler&ARM Compiler:I/O:STDERR&User

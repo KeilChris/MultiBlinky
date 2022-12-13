@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.4/tools/projmgr/schemas/clayer.schema.json
+
+layer:
+  # type: Board
+  # name: NUCLEO-G474RE
+  # variant: IoT-WiFi
+  description: Board setup
+  # for-board: NUCLEO-G474RE
+
+  # interfaces:
+  #   - consumes:
+  #     - RTOS2:
+  #   - provides:
+  #     - C_VIO:
+  #     - STDOUT:
+  #     - STDIN:
+  #     - STDERR:
+
+  # packs:
+  #   - pack: ARM::CMSIS
+  #   - pack: Keil::ARM_Compiler
+  #   - pack: Keil::STM32G4xx_DFP
+  #   - pack: Keil::NUCLEO-G474RE_BSP
+
+  add-paths:
+    - .
+
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: Keil::CMSIS Driver:VIO:Board&NUCLEO-G474RE
+    - component: Keil::Board Support&NUCLEO-G474RE:Drivers:Basic I/O
+    - component: Keil::Device&STM32CubeMX:STM32Cube Framework:STM32CubeMX
+    - component: Keil::Device&STM32CubeMX:STM32Cube HAL
+    - component: Keil::Device&STM32CubeMX:Startup
+
+    - component: Keil::Compiler&ARM Compiler:Event Recorder&DAP
+    - component: Keil::Compiler&ARM Compiler:I/O:STDERR&User
+    - component: Keil::Compiler&ARM Compiler:I/O:STDOUT&User
+    - component: Keil::Compiler&ARM Compiler:I/O:STDIN&User
+
+  groups:
+    - group: Board
+      files:
+        - file: ./arduino.c
+        - file: ./arduino.h
+        - file: ./retarget_stdio.c
+        - file: ./stm32g474.sct

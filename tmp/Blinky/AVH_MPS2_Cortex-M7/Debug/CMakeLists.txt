@@ -1,4 +1,4 @@
-# CMSIS Build CMakeLists generated on 2022-11-11T13:43:22
+# CMSIS Build CMakeLists generated on 2022-12-13T14:08:25
 
 cmake_minimum_required(VERSION 3.18)
 
@@ -6,17 +6,16 @@ cmake_minimum_required(VERSION 3.18)
 
 set(TARGET Blinky.Debug+AVH_MPS2_Cortex-M7)
 set(CPU Cortex-M7)
-set(PRJ_DIR "C:/02_Git/KeilChris/MultiBlinky")
+set(PRJ_DIR "c:/02_Git/KeilChris/MultiBlinky")
 set(OUT_DIR "C:/02_Git/KeilChris/MultiBlinky/out/Blinky/AVH_MPS2_Cortex-M7/Debug")
 set(INT_DIR "C:/02_Git/KeilChris/MultiBlinky/tmp/Blinky/AVH_MPS2_Cortex-M7/Debug")
 set(FPU DP_FPU)
 set(SECURE Non-secure)
 set(BYTE_ORDER Little-endian)
 set(AS_FLAGS_GLOBAL "-masm=auto")
-set(CC_FLAGS_GLOBAL "-O1 -g -std=c99")
-set(CXX_FLAGS_GLOBAL "-O1 -g")
-set(LD_FLAGS_GLOBAL "--entry=Reset_Handler")
-set(LD_SCRIPT "C:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/RTE/Device/CMSDK_CM7_DP_VHT/ac6_arm.sct")
+set(CC_FLAGS_GLOBAL "-O1 -g -Wno-macro-redefined -Wno-pragma-pack -Wno-parentheses-equality -std=c99")
+set(LD_FLAGS_GLOBAL "--entry=Reset_Handler --diag_suppress 6314")
+set(LD_SCRIPT "c:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/RTE/Device/CMSDK_CM7_DP_VHT/ac6_arm.sct")
 
 set(DEFINES
   CMSDK_CM7_DP_VHT
@@ -24,10 +23,10 @@ set(DEFINES
 )
 
 set(INC_PATHS
-  "C:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/RTE/Device/CMSDK_CM7_DP_VHT"
-  "C:/02_Git/KeilChris/MultiBlinky/Board/IMXRT1050-EVKB/RTE/Compiler"
-  "C:/02_Git/KeilChris/MultiBlinky/RTE/_Blinky.Debug_AVH_MPS2_Cortex-M7"
-  "C:/02_Git/KeilChris/MultiBlinky/RTOS/RTX/RTE/CMSIS"
+  "c:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/RTE/Compiler"
+  "c:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/RTE/Device/CMSDK_CM7_DP_VHT"
+  "c:/02_Git/KeilChris/MultiBlinky/RTE/_Blinky.Debug_AVH_MPS2_Cortex-M7"
+  "c:/02_Git/KeilChris/MultiBlinky/RTOS/RTX/RTE/CMSIS"
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include"
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Driver/Include"
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Driver/VIO/Include"
@@ -37,7 +36,7 @@ set(INC_PATHS
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/Keil/V2M-MPS2_CMx_BSP/1.8.0/Boards/ARM/V2M-MPS2/Common"
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/Keil/V2M-MPS2_CMx_BSP/1.8.0/Device/CMSDK_CM7/Include"
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/Keil/V2M-MPS2_CMx_BSP/1.8.0/Device/VHT/Include"
-  "C:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7"
+  "c:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7"
 )
 
 set(ASM_SRC_FILES
@@ -45,13 +44,6 @@ set(ASM_SRC_FILES
 )
 
 set(CC_SRC_FILES
-  "C:/02_Git/KeilChris/MultiBlinky/Blinky.c"
-  "C:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/Driver/vio_V2M-MPS2.c"
-  "C:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/RTE/Device/CMSDK_CM7_DP_VHT/startup_CMSDK_CM7.c"
-  "C:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/RTE/Device/CMSDK_CM7_DP_VHT/system_CMSDK_CM7.c"
-  "C:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/main.c"
-  "C:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/retarget_stdio.c"
-  "C:/02_Git/KeilChris/MultiBlinky/RTOS/RTX/RTE/CMSIS/RTX_Config.c"
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/ARM/CMSIS-Driver/2.7.2/ETH/ETH_LAN91C111.c"
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_delay.c"
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_evflags.c"
@@ -70,11 +62,18 @@ set(CC_SRC_FILES
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Source/EventRecorder.c"
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Source/retarget_io.c"
   "C:/Users/chrsei01/AppData/Local/Arm/Packs/Keil/V2M-MPS2_CMx_BSP/1.8.0/CMSIS/Driver/USART_V2M-MPS2.c"
+  "c:/02_Git/KeilChris/MultiBlinky/Blinky.c"
+  "c:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/Driver/vio_V2M-MPS2.c"
+  "c:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/RTE/Device/CMSDK_CM7_DP_VHT/startup_CMSDK_CM7.c"
+  "c:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/RTE/Device/CMSDK_CM7_DP_VHT/system_CMSDK_CM7.c"
+  "c:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/main.c"
+  "c:/02_Git/KeilChris/MultiBlinky/Board/AVH_MPS2_Cortex-M7/retarget_stdio.c"
+  "c:/02_Git/KeilChris/MultiBlinky/RTOS/RTX/RTE/CMSIS/RTX_Config.c"
 )
 
 # Toolchain config map
 
-include ("C:/Keil_v5/ARM/ctools/etc/AC6.6.18.0.cmake")
+include ("C:/Keil_v5/ARM/ctools/etc/AC6.6.19.0.cmake")
 
 # Setup project
 

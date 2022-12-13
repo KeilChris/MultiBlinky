@@ -33,7 +33,9 @@
 #define RTE_Compiler_IO_STDOUT          /* Compiler I/O: STDOUT */
           #define RTE_Compiler_IO_STDOUT_User     /* Compiler I/O: STDOUT User */
 /* NXP::Device:SDK Utilities:serial_manager_uart:1.0.0 */
+#ifndef SERIAL_PORT_TYPE_UART
 #define SERIAL_PORT_TYPE_UART 1
+#endif
 
 
 #endif /* RTE_COMPONENTS_H */

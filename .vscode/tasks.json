@@ -1,0 +1,47 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cmsis-csolution.build",
+			"project": "${command:cmsis-csolution.getCprjPath}",
+			"problemMatcher": [],
+			"label": "cmsis-csolution.build: Build"
+		},
+		{
+			"type": "embedded-debug.flash",
+			"serialNumber": "${command:device-manager.getSerialNumber}",
+			"program": "${command:cmsis-csolution.getBinaryFile}",
+			"cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/NXP.K32L3A60_DFP.15.0.0.pack",
+			"problemMatcher": [],
+			"label": "Flash K32L3A6",
+			"group": "build"
+		},
+		{
+			"type": "embedded-debug.flash",
+			"serialNumber": "${command:device-manager.getSerialNumber}",
+			"program": "${command:cmsis-csolution.getBinaryFile}",
+			"cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/NXP.MIMXRT1052_DFP.15.0.0.pack",
+			"problemMatcher": [],
+			"label": "Flash MIMXRT1050",
+			"group": "build"
+		},
+		{
+			"type": "embedded-debug.flash",
+			"serialNumber": "${command:device-manager.getSerialNumber}",
+			"program": "${command:cmsis-csolution.getBinaryFile}",
+			"cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/Keil.STM32G4xx_DFP.1.5.0.pack",
+			"problemMatcher": [],
+			"label": "Flash STM32G474",
+			"group": "build"
+		},
+		{
+			"type": "embedded-debug.flash",
+			"serialNumber": "${command:device-manager.getSerialNumber}",
+			"program": "${command:cmsis-csolution.getBinaryFile}",
+			"cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/Keil.STM32L4xx_DFP.2.6.1.pack",
+			"problemMatcher": [],
+			"label": "Flash STM32L475",
+			"group": "build"
+		}
+	]
+}
