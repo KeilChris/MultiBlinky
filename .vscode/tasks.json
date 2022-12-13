@@ -46,6 +46,15 @@
 			"type": "embedded-debug.flash",
 			"serialNumber": "${command:device-manager.getSerialNumber}",
 			"program": "${command:cmsis-csolution.getBinaryFile}",
+			"cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/Keil.STM32G0xx_DFP.1.4.0.pack",
+			"problemMatcher": [],
+			"label": "Flash STM32G0B1",
+			"group": "build"
+		},
+		{
+			"type": "embedded-debug.flash",
+			"serialNumber": "${command:device-manager.getSerialNumber}",
+			"program": "${command:cmsis-csolution.getBinaryFile}",
 			"cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/Keil.STM32G4xx_DFP.1.5.0.pack",
 			"problemMatcher": [],
 			"label": "Flash STM32G474",

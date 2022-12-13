@@ -23,6 +23,16 @@
             "debugFrom": "main"
         },
         {
+            "name": "Dbg STM32G0B1",
+            "type": "embedded-debug",
+            "request": "launch",
+            "serialNumber": "${command:device-manager.getSerialNumber}",
+            "program": "${command:cmsis-csolution.getBinaryFile}",
+            "cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/Keil.STM32G0xx_DFP.1.4.0.pack",
+            "debugFrom": "main",
+            "connectMode": "underReset"
+        },
+        {
             "name": "Dbg STM32G474",
             "type": "embedded-debug",
             "request": "launch",
