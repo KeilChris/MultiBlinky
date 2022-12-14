@@ -23,6 +23,15 @@
             "debugFrom": "main"
         },
         {
+            "name": "Dbg LPC55S69",
+            "type": "embedded-debug",
+            "request": "launch",
+            "serialNumber": "${command:device-manager.getSerialNumber}",
+            "program": "${command:cmsis-csolution.getBinaryFile}",
+            "cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/NXP.LPC55S69_DFP.15.0.0.pack",
+            "debugFrom": "main"
+        },
+        {
             "name": "Dbg STM32G0B1",
             "type": "embedded-debug",
             "request": "launch",

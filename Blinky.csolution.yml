@@ -38,6 +38,17 @@ solution:
       for-type:
         - +FRDM-K32L3A6
 
+    # packs for LPCXpresso55S69
+    - pack: NXP::LPC55S69_DFP
+      for-type:
+        - +LPCXpresso55S69
+    - pack: NXP::LPCXpresso55S69_BSP
+      for-type:
+        - +LPCXpresso55S69
+    - pack: Keil::LPCXpresso55S69_BSP
+      for-type:
+        - +LPCXpresso55S69
+
     # packs for B-L475E-IOT01A
     - pack: Keil::STM32L4xx_DFP@2.6.1
       for-type:
@@ -77,6 +88,10 @@ solution:
     - type: FRDM-K32L3A6
       board: NXP::FRDM-K32L3A6
       device: NXP::K32L3A60VPJ1A:cm4
+
+    - type: LPCXpresso55S69
+      board: NXP::LPCXpresso55S69
+      device: NXP::LPC55S69JBD100:cm33_core0
 
     - type: B-L475E-IOT01A
       board: STMicroelectronics::B-L475E-IOT01A
