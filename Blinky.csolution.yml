@@ -31,18 +31,18 @@ solution:
         - +IMXRT1050-EVKB
 
     # packs for FRDM-K32L3A6
-    - pack: NXP::K32L3A60_DFP
+    - pack: NXP::K32L3A60_DFP@13.0.0
       for-type:
         - +FRDM-K32L3A6
-    - pack: NXP::FRDM-K32L3A6_BSP
+    - pack: NXP::FRDM-K32L3A6_BSP@13.0.0
       for-type:
         - +FRDM-K32L3A6
 
     # packs for LPCXpresso55S69
-    - pack: NXP::LPC55S69_DFP
+    - pack: NXP::LPC55S69_DFP@13.0.0
       for-type:
         - +LPCXpresso55S69
-    - pack: NXP::LPCXpresso55S69_BSP
+    - pack: NXP::LPCXpresso55S69_BSP@13.0.0
       for-type:
         - +LPCXpresso55S69
     - pack: Keil::LPCXpresso55S69_BSP
@@ -112,29 +112,11 @@ solution:
         - C:
           - -O1
           - -g
-          - -Wno-macro-redefined
-          - -Wno-pragma-pack
-          - -Wno-parentheses-equality
-          - -std=c99
-        - ASM:
-          - -masm=auto
-        - Link:
-          - --entry=Reset_Handler
-          - --diag_suppress 6314
     - type: Release
       compiler: AC6
       misc:
         - C:
           - -O3
-          - -Wno-macro-redefined
-          - -Wno-pragma-pack
-          - -Wno-parentheses-equality
-          - -std=c99
-        - ASM:
-          - -masm=auto
-        - Link:
-          - --entry=Reset_Handler
-          - --diag_suppress 6314
 
   projects:
     - project: ./Blinky.cproject.yml

@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "shell",
-			"label": "Run VHT",
+			"label": "Run AVH",
 			"command": "VHT_Corstone_SSE-300_Ethos-U55.exe",
 			"args": [
 				"-f",
