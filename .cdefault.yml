@@ -23,6 +23,7 @@ default:
       Link:
         - --entry=Reset_Handler
         - --info summarysizes
+        - --summary_stderr
         - --diag_suppress 6314
 
     - for-compiler: IAR
