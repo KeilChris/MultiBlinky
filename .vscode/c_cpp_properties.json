@@ -10,8 +10,10 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "intelliSenseMode": "windows-clang-arm",
-            "compileCommands": "${workspaceFolder}/tmp/Blinky/NUCLEO-G474RE/Debug/compile_commands.json"
+            "intelliSenseMode": "clang-arm",
+            "compileCommands": "${workspaceFolder}/tmp/Blinky/NUCLEO-G474RE/Debug/compile_commands.json",
+            "compilerPath": "C:\\Keil_v5\\ARM\\ARMCLANG\\bin\\armclang.exe",
+            "cStandard": "c99"
         }
     ],
     "version": 4

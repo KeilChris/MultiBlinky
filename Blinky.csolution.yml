@@ -108,15 +108,12 @@ solution:
   build-types:
     - type: Debug
       compiler: AC6
-      misc:
-        - C:
-          - -O1
-          - -g
+      debug: on
+      optimize: none
     - type: Release
       compiler: AC6
-      misc:
-        - C:
-          - -O3
+      debug: off
+      optimize: balanced
 
   projects:
     - project: ./Blinky.cproject.yml
