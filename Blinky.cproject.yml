@@ -2,9 +2,9 @@
 
 project:
 
-  output:
-    - type: elf
-      file: $BuildType$+$TargetType$.axf
+#  output:
+#    - type: elf
+#      file: $BuildType$+$TargetType$.axf
 
   groups:
     - group: Documentation
@@ -16,27 +16,27 @@ project:
 
   layers:
     - layer: ./Board/AVH_MPS2_Cortex-M7/Board.clayer.yml
-      for-type: 
+      for-context: 
         - +AVH_MPS2_Cortex-M7
     - layer: ./Board/AVH_MPS3_Corstone-300/Board.clayer.yml
-      for-type: 
+      for-context: 
         - +AVH_MPS3_Corstone-300
     - layer: ./Board/IMXRT1050-EVKB/Board.clayer.yml
-      for-type: 
+      for-context: 
         - +IMXRT1050-EVKB
     - layer: ./Board/FRDM-K32L3A6/Board.clayer.yml
-      for-type: 
+      for-context: 
         - +FRDM-K32L3A6
     - layer: ./Board/LPCXpresso55S69/Board.clayer.yml
-      for-type: 
+      for-context: 
         - +LPCXpresso55S69
     - layer: ./Board/B-L475E-IOT01A/Board.clayer.yml
-      for-type: 
+      for-context: 
         - +B-L475E-IOT01A
     - layer: ./Board/NUCLEO-G474/Board.clayer.yml
-      for-type: 
+      for-context: 
         - +NUCLEO-G474RE
     - layer: ./Board/NUCLEO-G0B1RE/Board.clayer.yml
-      for-type: 
+      for-context: 
         - +NUCLEO-G0B1RE
     - layer: ./RTOS/RTX/RTOS.clayer.yml

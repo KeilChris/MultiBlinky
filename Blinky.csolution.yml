@@ -2,75 +2,75 @@
 
 solution:
   packs:
-    - pack: ARM::CMSIS
+    - pack: ARM::CMSIS@5.9.0
     - pack: ARM::CMSIS-Driver
     - pack: Keil::ARM_Compiler
 
     # packs for AVH_MPS2_Cortex-M7
     - pack: Keil::V2M-MPS2_CMx_BSP@1.8.0
-      for-type:
+      for-context:
         - +AVH_MPS2_Cortex-M7
 
     # packs for AVH_MPS3_Corstone-300
     - pack: ARM::V2M_MPS3_SSE_300_BSP@1.2.0
-      for-type:
+      for-context:
         - +AVH_MPS3_Corstone-300
 
     # packs for IMXRT1050-EVKB
     - pack: NXP::MIMXRT1052_DFP@13.1.0
-      for-type:
+      for-context:
         - +IMXRT1050-EVKB
     - pack: NXP::EVKB-IMXRT1050_BSP@13.1.0
-      for-type:
+      for-context:
         - +IMXRT1050-EVKB
     - pack: Keil::IMXRT1050-EVKB_BSP@1.0.0
-      for-type:
+      for-context:
         - +IMXRT1050-EVKB
     - pack: Keil::iMXRT105x_MWP@1.4.0
-      for-type:
+      for-context:
         - +IMXRT1050-EVKB
 
     # packs for FRDM-K32L3A6
     - pack: NXP::K32L3A60_DFP@13.0.0
-      for-type:
+      for-context:
         - +FRDM-K32L3A6
     - pack: NXP::FRDM-K32L3A6_BSP@13.0.0
-      for-type:
+      for-context:
         - +FRDM-K32L3A6
 
     # packs for LPCXpresso55S69
     - pack: NXP::LPC55S69_DFP@13.0.0
-      for-type:
+      for-context:
         - +LPCXpresso55S69
     - pack: NXP::LPCXpresso55S69_BSP@13.0.0
-      for-type:
+      for-context:
         - +LPCXpresso55S69
     - pack: Keil::LPCXpresso55S69_BSP
-      for-type:
+      for-context:
         - +LPCXpresso55S69
 
     # packs for B-L475E-IOT01A
     - pack: Keil::STM32L4xx_DFP@2.6.1
-      for-type:
+      for-context:
         - +B-L475E-IOT01A
     - pack: Keil::B-L475E-IOT01A_BSP@1.0.1
-      for-type:
+      for-context:
         - +B-L475E-IOT01A
 
     # packs for NUCLEO-G474RE
     - pack: Keil::STM32G4xx_DFP
-      for-type:
+      for-context:
         - +NUCLEO-G474RE
     - pack: Keil::NUCLEO-G474RE_BSP
-      for-type:
+      for-context:
         - +NUCLEO-G474RE
 
     # packs for NUCLEO-G0B1RE
     - pack: Keil::STM32G0xx_DFP
-      for-type:
+      for-context:
         - +NUCLEO-G0B1RE
     - pack: Keil::NUCLEO-G0B1RE_BSP
-      for-type:
+      for-context:
         - +NUCLEO-G0B1RE
 
   target-types:

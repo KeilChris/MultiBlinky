@@ -1,0 +1,61 @@
+# This YAML file is used to build and run an ML project on Arm Virtual Hardware FVP
+# It contains a job that runs tests on a Ubuntu machine using a custom Docker image
+
+name: Build and Run "Blinky" on Arm Virtual Hardware FVP
+
+on:
+  # Trigger the workflow when a workflow run is completed
+  workflow_run:
+    workflows: ["Licensed Docker Image - Build and Push"]
+    types:
+      - completed
+  # Trigger the workflow manually
+  workflow_dispatch:
+
+jobs:
+  run_test:
+    runs-on: ubuntu-latest
+    container:
+      # Use the custom Docker image with the necessary tools and dependencies
+      image: ghcr.io/arm-software/keilchris/keilchris-docker-licensed:latest
+      credentials:
+        # Set the Docker image credentials using the actor and a GitHub token
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        # Check out the repository containing the ML project
+        uses: actions/checkout@v2
+
+      - name: Set permissions for working directory __w
+        # Set permissions for the working directory to avoid permission errors
+        run: chmod 777 -R /__w
+
+      - name: Install custom CMSIS packs
+        # Install custom CMSIS packs required for the ML project
+        run: | 
+             wget -P /home/keilchris_docker https://github.com/ARM-software/CMSIS_6/releases/download/dev%2Fv6.0.0-dev35/ARM.CMSIS.6.0.0-dev35+geb1d42a.pack -nv
+             su -l keilchris_docker -c "/home/keilchris_docker/cmsis-toolbox-linux-amd64/bin/cpackget add ARM.CMSIS.6.0.0-dev35+geb1d42a.pack --agree-embedded-license"
+             wget -P /home/keilchris_docker https://github.com/ARM-software/Cortex_DFP/releases/download/dev%2Fv1.0.0-dev15/ARM.Cortex_DFP.1.0.0-dev15+gf6802e4.pack -nv
+             su -l keilchris_docker -c "/home/keilchris_docker/cmsis-toolbox-linux-amd64/bin/cpackget add ARM.Cortex_DFP.1.0.0-dev15+gf6802e4.pack --agree-embedded-license"
+
+      - name: Build Model and Test for Cortex-M4 with AC6 (size) / Corstone-300 for Community Edition
+        run: |
+             if [ -z "${{ secrets.ARM_UBL_LICENSE_IDENTIFIER }}" ]; then
+                su - keilchris_docker -c "/home/keilchris_docker/cmsis-toolbox-linux-amd64/bin/cbuild /__w/keilchris/keilchris/Blinky.csolution.yml --packs --context +CM55_Ethos --toolchain AC6"
+              else
+                su - keilchris_docker -c "/home/keilchris_docker/cmsis-toolbox-linux-amd64/bin/cbuild /__w/keilchris/keilchris/Blinky.csolution.yml --packs --context +CM4 --toolchain AC6"
+              fi
+
+      - name: Execute Test Project on Arm Virtual Hardware FVP
+        run: |
+            if [ -z "${{ secrets.ARM_UBL_LICENSE_IDENTIFIER }}" ]; then
+             su - keilchris_docker -c "/home/keilchris_docker/avh-fvp-11.22.39/avh-linux-x86/bin/FVP_Corstone_SSE-300_Ethos-U55 -f /__w/keilchris/keilchris/Board/AVH_MPS3_Corstone-300/fvp_config.txt /__w/keilchris/keilchris/mlek-kws/out/ML_Test/CM55_Ethos/size/ML_Test.axf -C ethosu.num_macs=256 --simlimit 12"
+            else
+             su - keilchris_docker -c "/home/keilchris_docker/avh-fvp-11.22.39/avh-linux-x86/bin/FVP_MPS2_Cortex-M4 -f /__w/keilchris/keilchris/TFLmicrospeech/Target/CM4/fvp_config.txt /__w/keilchris/keilchris/mlek-kws/out/ML_Test/CM4/size/ML_Test.axf --simlimit 12"
+            fi
+
+#      - name: Get timings from Event Recorder Log
+#        run: |
+#             su - keilchris_docker -c "/home/keilchris_docker/cmsis-toolbox-linux-amd64/bin/eventlist -s ./EventRecorder.log"
