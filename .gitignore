@@ -61,3 +61,4 @@ dkms.conf
 RTE/*/RTE_Components.h
 RTE/*/Pre_Include_Global.h
 regions_*.h
+**.DS_Store
