@@ -24,7 +24,7 @@ default:
         - --entry=Reset_Handler
         - --info summarysizes
         - --summary_stderr
-        - --diag_suppress=6314,6848
+        - --diag_suppress=L6314W,L6848E
 
     - for-compiler: IAR
       C-CPP:
