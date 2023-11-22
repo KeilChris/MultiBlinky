@@ -17,6 +17,15 @@
 				"kind": "build",
 				"isDefault": true
 			}
-		}
-    ]
+		},
+		{
+			"type": "embedded-debug.arm-flash",
+			"serialNumber": "${command:device-manager.getSerialNumber}",
+			"program": "${command:embedded-debug.getApplicationFile}",
+			"cmsisPack": "${command:device-manager.getDevicePack}",
+			"problemMatcher": [],
+			"probe": "ST-Link",
+			"label": "ST-Link"
+		},
+	]
 }

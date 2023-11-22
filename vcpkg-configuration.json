@@ -18,6 +18,7 @@
     "arm:compilers/arm/arm-none-eabi-gcc": "^12.3.1-0",
     "arm:compilers/arm/llvm-embedded": "^16.0.0-0",
     "arm:tools/open-cmsis-pack/cmsis-toolbox": "^2.1.0-0",
-    "arm:models/arm/avh-fvp": "^11.22.39"
+    "arm:models/arm/avh-fvp": "^11.22.39",
+    "arm:debuggers/arm/armdbg": "^6.0.1"
   }
 }

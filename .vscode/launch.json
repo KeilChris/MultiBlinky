@@ -5,61 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Dbg K32L3A6",
-            "type": "embedded-debug",
+            "name": "CMSIS-DAP",
+            "probe": "CMSIS-DAP",
+            "type": "arm-debug",
             "request": "launch",
             "serialNumber": "${command:device-manager.getSerialNumber}",
-            "program": "${command:cmsis-csolution.getBinaryFile}",
-            "cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/NXP.K32L3A60_DFP.15.0.0.pack",
-            "debugFrom": "main"
+            "program": "${command:embedded-debug.getApplicationFile}",
+            "cmsisPack": "${command:device-manager.getDevicePack}"
         },
         {
-            "name": "Dbg MIMXRT1052",
-            "type": "embedded-debug",
+            "name": "ST-Link",
+            "probe": "ST-Link",
+            "type": "arm-debug",
             "request": "launch",
             "serialNumber": "${command:device-manager.getSerialNumber}",
-            "program": "${command:cmsis-csolution.getBinaryFile}",
-            "cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/NXP.MIMXRT1052_DFP.15.0.0.pack",
-            "debugFrom": "main"
-        },
-        {
-            "name": "Dbg LPC55S69",
-            "type": "embedded-debug",
-            "request": "launch",
-            "serialNumber": "${command:device-manager.getSerialNumber}",
-            "program": "${command:cmsis-csolution.getBinaryFile}",
-            "cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/NXP.LPC55S69_DFP.15.0.0.pack",
-            "debugFrom": "main"
-        },
-        {
-            "name": "Dbg STM32G0B1",
-            "type": "embedded-debug",
-            "request": "launch",
-            "serialNumber": "${command:device-manager.getSerialNumber}",
-            "program": "${command:cmsis-csolution.getBinaryFile}",
-            "cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/Keil.STM32G0xx_DFP.1.4.0.pack",
-            "debugFrom": "main",
-            "connectMode": "underReset"
-        },
-        {
-            "name": "Dbg STM32G474",
-            "type": "embedded-debug",
-            "request": "launch",
-            "serialNumber": "${command:device-manager.getSerialNumber}",
-            "program": "${command:cmsis-csolution.getBinaryFile}",
-            "cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/Keil.STM32G4xx_DFP.1.5.0.pack",
-            "debugFrom": "main",
-            "connectMode": "underReset"
-        },
-        {
-            "name": "Dbg STM32L475",
-            "type": "embedded-debug",
-            "request": "launch",
-            "serialNumber": "${command:device-manager.getSerialNumber}",
-            "program": "${command:cmsis-csolution.getBinaryFile}",
-            "cmsisPack": "${env:CMSIS_PACK_ROOT}/.Download/Keil.STM32L4xx_DFP.2.6.1.pack",
-            "debugFrom": "main",
-            "connectMode": "underReset"
+            "program": "${command:embedded-debug.getApplicationFile}",
+            "cmsisPack": "${command:device-manager.getDevicePack}"
         }
     ]
 }
