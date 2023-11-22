@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/1.4.0/tools/projmgr/schemas/cdefault.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/2.1.0/tools/projmgr/schemas/cdefault.schema.json
 
 default:
   compiler: AC6
@@ -24,7 +24,7 @@ default:
         - --entry=Reset_Handler
         - --info summarysizes
         - --summary_stderr
-        - --diag_suppress 6314
+        - --diag_suppress=6314,6848
 
     - for-compiler: IAR
       C-CPP:

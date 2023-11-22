@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.3/tools/projmgr/schemas/clayer.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/2.1.0/tools/projmgr/schemas/clayer.schema.json
 
 layer:
   # type: Board
@@ -29,18 +29,18 @@ layer:
   #   - pack: Keil::IMXRT1050-EVKB_BSP@1.0.0
   #   - pack: Keil::iMXRT105x_MWP@1.4.0
 
-  add-paths:
+  add-path:
     - .
 
-  defines:
-    - ETH_PHY_REF_CLK_50M=1
-    - SDK_DEBUGCONSOLE=1
+  define:
+    - ETH_PHY_REF_CLK_50M: 1
+    - SDK_DEBUGCONSOLE: 1
     # - __MCUXPRESSO
     - SDK_I2C_BASED_COMPONENT_USED
     - SKIP_SYSCLK_INIT
-    - XIP_BOOT_HEADER_DCD_ENABLE=1
-    - XIP_BOOT_HEADER_ENABLE=1
-    - XIP_EXTERNAL_FLASH=1
+    - XIP_BOOT_HEADER_DCD_ENABLE: 1
+    - XIP_BOOT_HEADER_ENABLE: 1
+    - XIP_EXTERNAL_FLASH: 1
 
   misc:
     - Link:
@@ -99,9 +99,9 @@ layer:
     - component: Keil::Compiler&ARM Compiler:I/O:STDIN&User
 
     - component: Keil::CMSIS Driver:WiFi:ESP8266&UART
-      for-type: +IMXRT1050-EVKB_ESP8266
+      for-context: +IMXRT1050-EVKB_ESP8266
     - component: Keil::CMSIS Driver:WiFi:WizFi360&UART
-      for-type: +IMXRT1050-EVKB_WizFi360
+      for-context: +IMXRT1050-EVKB_WizFi360
 
   groups:
     - group: Board
