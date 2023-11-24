@@ -25,7 +25,26 @@
 			"cmsisPack": "${command:device-manager.getDevicePack}",
 			"problemMatcher": [],
 			"probe": "ST-Link",
-			"label": "ST-Link"
+			"label": "ST-Link Flash"
 		},
+		{
+			"type": "cmsis-csolution.build",
+			"solution": "${command:cmsis-csolution.getSolutionPath}",
+			"project": "${command:cmsis-csolution.getProjectPath}",
+			"buildType": "${command:cmsis-csolution.getBuildType}",
+			"targetType": "${command:cmsis-csolution.getTargetType}",
+			"rebuild": false,
+			"problemMatcher": [],
+			"label": "cmsis-csolution.build: Build"
+		},
+		{
+			"type": "embedded-debug.arm-flash",
+			"serialNumber": "${command:device-manager.getSerialNumber}",
+			"program": "${command:embedded-debug.getApplicationFile}",
+			"cmsisPack": "${command:device-manager.getDevicePack}",
+			"problemMatcher": [],
+			"probe": "CMSIS-DAP",
+			"label": "CMSIS-DAP Flash"
+		}
 	]
 }
