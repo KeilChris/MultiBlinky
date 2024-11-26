@@ -12,13 +12,13 @@
     }
   ],
   "requires": {
-    "microsoft:cmake": "^3.25.2",
-    "microsoft:ninja": "^1.10.2",
-    "arm:compilers/arm/armclang":"^6.20.0",
-    "arm:compilers/arm/arm-none-eabi-gcc": "^12.3.1-0",
-    "arm:compilers/arm/llvm-embedded": "^16.0.0-0",
-    "arm:tools/open-cmsis-pack/cmsis-toolbox": "^2.1.0-0",
+    "microsoft:tools/kitware/cmake": "^3.25.2",
+    "microsoft:tools/ninja-build/ninja": "^1.10.2",
     "arm:models/arm/avh-fvp": "^11.22.39",
-    "arm:debuggers/arm/armdbg": "~6.0.1"
+    "arm:tools/open-cmsis-pack/cmsis-toolbox": "^2.2.1",
+    "arm:compilers/arm/arm-none-eabi-gcc": "^13.2.1",
+    "arm:compilers/arm/armclang": "^6.21.0",
+    "arm:compilers/arm/llvm-embedded": "^16.0.0-0",
+    "arm:debuggers/arm/armdbg": "^6.0.2"
   }
 }

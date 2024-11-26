@@ -22,8 +22,8 @@ layer:
   #   - pack: Keil::STM32G4xx_DFP
   #   - pack: Keil::NUCLEO-G474RE_BSP
 
-  add-paths:
-    - .
+  #add-path:
+  #  - .
 
   components:
     - component: ARM::CMSIS:CORE
